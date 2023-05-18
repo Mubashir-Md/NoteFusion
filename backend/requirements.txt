@@ -1,0 +1,11 @@
+Flask==2.1.2
+Flask-Cors==3.0.10
+Jinja2==3.1.2
+openai==0.27.6
+pdfminer.six==20221105
+pdfplumber==0.9.0
+Pillow==9.5.0
+PyPDF2==3.0.1
+python-dotenv<=1.0.0
+requests==2.30.0
+gunicorn==20.1.0

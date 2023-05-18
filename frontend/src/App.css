@@ -1,0 +1,55 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #00172b;
+  color: azure;
+}
+div.Home{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  
+}
+div.Home h1{
+  font-size: 10vmax;
+}
+.Home button{
+  margin: 2%;
+  padding: 1% 3%;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 10px;
+}
+div.Pdf{
+  padding: 2%;
+  margin: 2%;
+}
+div.Pdf form{
+  text-align: center;
+
+}
+div.Pdf form button{
+  padding: 1% 3%;
+  margin: 2%;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+div.recv{
+  border: 2px solid white;
+  color: azure; 
+  margin: 1%;
+  padding: 1%
+}
+
+p.recvData{
+  margin: 1%; 
+  padding: 2%;
+}
