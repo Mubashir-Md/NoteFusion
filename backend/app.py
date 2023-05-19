@@ -18,7 +18,7 @@ def home():
 
     url = 'https://api.pawan.krd/resetip'
     headers = {
-        'Authorization': 'Bearer ' + os.getenv('API_KEY')
+        'Authorization': 'Bearer pk-YspeKZWeIktTmWZKtXEPtisBOuORiPbcaJcRAfIaaCvPCekg'
     }
 
     response1 = requests.post(url, headers=headers)
