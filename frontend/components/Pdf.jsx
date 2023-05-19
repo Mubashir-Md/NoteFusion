@@ -18,7 +18,8 @@ function Pdf() {
     const formData = new FormData();
     formData.append('file', file);
     try {
-      const response = await axios.post('https://backend-nf.onrender.com/output', formData);
+      // const response = await axios.post('https://backend-nf.onrender.com/output', formData);
+      const response = await axios.post('http://localhost:5000/output', formData);
 
       const responseData = response.data;
       setData(responseData.summary);
