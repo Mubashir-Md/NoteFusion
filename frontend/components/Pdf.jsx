@@ -19,8 +19,19 @@ function Pdf() {
     formData.append('file', file);
     try {
       // const response = await axios.post('https://backend-nf.onrender.com/output', formData);
+      
+      await axios({
+        method: "POST",
+        url: "https://api.pawan.krd/resetip/",
+        data: {
+        // put the data you want here
+        },
+        headers: {
+        "Content-Type": "application/json",
+        "Authorization": "Bearer pk-YspeKZWeIktTmWZKtXEPtisBOuORiPbcaJcRAfIaaCvPCekg"
+        }
+      })
       const response = await axios.post('https://backend-nf.onrender.com/output', formData);
-
       const responseData = response.data;
       setData(responseData.summary);
       // console.log(responseData.summary);
