@@ -11,17 +11,15 @@ load_dotenv()
 app = Flask(__name__)
 CORS(app)
 
+url = 'https://api.pawan.krd/resetip'
+headers = {
+    'Authorization': 'Bearer pk-YspeKZWeIktTmWZKtXEPtisBOuORiPbcaJcRAfIaaCvPCekg'
+}
 
+response1 = requests.post(url, headers=headers)
 
 @app.route("/output", methods=['POST'])
 def home():
-
-    url = 'https://api.pawan.krd/resetip'
-    headers = {
-        'Authorization': 'Bearer pk-YspeKZWeIktTmWZKtXEPtisBOuORiPbcaJcRAfIaaCvPCekg'
-    }
-
-    response1 = requests.post(url, headers=headers)
    
     file = request.files['file']
     readpdf = PyPDF2.PdfReader(file)
