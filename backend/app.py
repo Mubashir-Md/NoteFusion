@@ -2,6 +2,7 @@ import pdfplumber
 import openai
 import PyPDF2
 import os
+import requests
 from flask import Flask, request, jsonify,Response
 from dotenv import load_dotenv
 from flask_cors import CORS
@@ -10,8 +11,17 @@ load_dotenv()
 app = Flask(__name__)
 CORS(app)
 
+
+
 @app.route("/output", methods=['POST'])
 def home():
+
+    url = 'https://api.pawan.krd/resetip'
+    headers = {
+        'Authorization': 'Bearer ' + os.getenv('API_KEY')
+    }
+
+    response1 = requests.post(url, headers=headers)
    
     file = request.files['file']
     readpdf = PyPDF2.PdfReader(file)
@@ -44,4 +54,6 @@ def home():
                 break
 
     return jsonify(response_data)
+
+
 

@@ -1,6 +1,6 @@
 // import React, { useState } from 'react'
-import { useEffect, useState } from 'react'
-import { FaUpload } from 'react-icons/fa'
+import { useState } from 'react'
+// import { FaUpload } from 'react-icons/fa'
 import axios from 'axios';
 
 function Pdf() {
@@ -19,7 +19,7 @@ function Pdf() {
     formData.append('file', file);
     try {
       // const response = await axios.post('https://backend-nf.onrender.com/output', formData);
-      const response = await axios.post('http://localhost:5000/output', formData);
+      const response = await axios.post('https://backend-nf.onrender.com/output', formData);
 
       const responseData = response.data;
       setData(responseData.summary);
